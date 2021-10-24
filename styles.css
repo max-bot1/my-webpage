@@ -1,0 +1,25 @@
+.wrap {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2; /* cover up menu when inactive */
+  background-color: rgb(251, 167, 56);
+}
+.menu {
+  width: 100px;
+  height: 100%;
+  position: absolute; /* hide behind main box */
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transition: right 0.5s ease; /* sexy transition effect */
+  background-color: lightgray;
+}
+.wrap:hover .menu {
+  right: -100px; /* show menu when main area is hovered over */
+}
